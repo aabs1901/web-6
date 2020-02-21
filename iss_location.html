@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Hellow Fetch - Where's the ISS?</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+
+        <script async defer src="fetch.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1> Time and Date</h1>
+            <p id= "time"></p>
+            <script>
+                let timeElement =document.querySelector('#time')
+    
+                setTimeout( () => {
+                    let date =Date()
+                    timeElement.innerHTML =date
+    
+                }, 1000)
+            </script>
+        </div>
+
+        <h1>Where is the International Space Station?</h1>
+        <div>
+            <p>ISS Latitude: <span id="iss-lat"></p>
+            <p>ISS Longitude: <span id="iss-long"></span></p>
+        </div>
+        <div id= "iss-map"></div>
+        <footer>
+            <p>Satellite Icon <a href="https://www.shutterstock.com/search/satellite+icon"> link</a> </p>
+        </footer>
+        
+    </body>
+
+</html>

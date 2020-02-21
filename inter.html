@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Timeout</title>
+
+    </head>
+
+    <body>
+        <h1> Expect to see an aleart 3 seconds after this pages loads.
+                <p id="time"></p>
+        </h1>
+
+        <script>
+            let timeElement =document.querySelector('#time')
+
+            setTimeout( () => {
+                let date =Date()
+                timeElement.innerHTML =date
+
+            }, 1000)
+        </script>
+    </body>
+</html>
